@@ -1,0 +1,485 @@
+:root {
+    --primary: #FF5733; /* Vibrant Orange */
+    --primary-light: #FFA07A; /* Lighter Orange */
+    --secondary: #007BFF; /* Bright Blue */
+    --secondary-light: #ADD8E6; /* Lighter Blue */
+    --background: #F9F9F9; /* Light Background */
+    --text: #333333; /* Dark Text */
+    --accent: #20B2AA; /* Soft Teal */
+    --gray: #D3D3D3; /* Light Gray */
+    --gray-light: #E0E0E0; /* Very Light Gray */
+    --white: #FFFFFF; /* Pure White */
+}
+
+
+/* Body Styles */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+}
+
+/* Container */
+.container {
+    max-width: 1320px;
+    background-color: var(--gray);
+    margin: 0 auto;
+}
+
+.container-full {
+    max-width: 100%;
+    background-color: var(--gray-light);
+    margin: 0;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px;
+    background-color: var(--gray);
+}
+
+.logo img {
+    max-width: 15rem;
+    height: auto;
+    padding: 10px;
+}
+
+.navlinks {
+    display: flex;
+}
+
+.navlinks li {
+    list-style: none;
+}
+
+.navlinks a {
+    text-decoration: none;
+    padding: 10px 15px;
+    margin: 0 10px;
+    color: var(--text);
+}
+
+.navlinks a:hover,
+.navlinks .active a {
+    color: var(--white);
+    background-color: var(--primary);
+    border-radius: 5px;
+}
+
+/* Hero Section */
+/* Hero Section */
+#hero {
+    position: relative;
+    width: 100%;
+    height: 75vh;
+    overflow: hidden;
+}
+
+.herobg {
+    background-image: url('./img/gymimg.jpeg'); /* Ensure the path to your image is correct */
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.herobg::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay for better text contrast */
+    z-index: 1;
+}
+
+.hero-text {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: var(--white);
+    max-width: 700px;
+    padding: 20px;
+}
+
+.hero-discount {
+    display: inline-block;
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 1em;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.hero-title {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin: 10px 0;
+    line-height: 1.2;
+}
+
+.hero-description {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: var(--white);
+}
+
+.hero-button {
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 1em;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.hero-button:hover {
+    background-color: var(--primary-light);
+}
+
+
+/* About Us */
+/* About Us Section */
+#aboutus {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5rem 2rem;
+    background-color: var(--gray-light);
+    gap: 2rem;
+}
+
+.about-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+.about-image img {
+
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-text {
+    max-width: 50%;
+}
+
+.about-text h2 {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.about-text p {
+    font-size: 1rem;
+    color: var(--gray-dark);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.about-buttons {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.btn-about,
+.btn-membership {
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-about {
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+.btn-membership {
+    background-color: var(--secondary);
+    color: var(--white);
+}
+
+.btn-about:hover {
+    background-color: var(--primary-light);
+}
+
+.btn-membership:hover {
+    background-color: var(--secondary-light);
+}
+
+/* Services Section */
+#services {
+    padding: 5rem 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--gray);
+    color: var(--white);
+}
+
+#services h2{
+    color: var(--primary);
+}
+
+.services-text {
+    margin-bottom: 30px;
+    color: var(--text);
+}
+
+.services-cards {
+    display: flex;
+    justify-content: space-around; /* Align cards to the left */
+    flex-direction: row; /* Horizontal alignment */
+    gap: 20px; /* Space between cards */
+}
+
+.service-card {
+    background: var(--gray-light);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    max-width: 300px;
+    flex: 1; /* Makes cards grow equally */
+    color: var(--text);
+}
+
+.service-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.service-card h3 {
+    margin: 15px 0 10px;
+    font-size: 1.5em;
+}
+
+.service-card p {
+    color: var(--text);
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+
+.service-button {
+    background: var(--primary);
+    color: var(--white);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.service-button:hover {
+    background: var(--primary-light);
+}
+
+/* Footer */
+/* Footer Styling */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 2rem;
+    background-color: var(--gray-light); /* Light Gray Background for Footer */
+    color: var(--text); /* Dark Text for Readability */
+    flex-wrap: wrap; /* Ensures responsiveness */
+    gap: 2rem;
+}
+
+.footer .logo img {
+    max-width: 120px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.footer .logo p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-top: 10px;
+    color: var(--text); /* Adjusted for dark text */
+    width: 50%;
+}
+
+.footer-menu, .contact-details {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-menu h3, .contact-details h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    color: var(--primary); /* Primary color for headers */
+}
+
+.footer-links, .contact-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li, .contact-items li {
+    margin-bottom: 10px;
+}
+
+.footer-links a, .contact-items a {
+    text-decoration: none;
+    color: var(--secondary); /* Secondary color for links */
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover, .contact-items a:hover {
+    color: var(--accent); /* Accent color for hover effects */
+}
+
+.contact-items li {
+    font-size: 0.9rem;
+}
+
+.copyright {
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--primary-light); /* Lightened primary for contrast */
+    color: var(--white); /* White text for visibility */
+    font-size: 0.9rem;
+    margin-top: 1rem;
+}
+
+/* Membership Plans */
+#membership-plans {
+    padding: 40px 20px;
+    text-align: center;
+    background: #f9f9f9;
+}
+
+.membership-container h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.membership-container p {
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.plans-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.plan-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.plan-card:hover {
+    transform: translateY(-5px);
+}
+
+.plan-price {
+    font-size: 1.5rem;
+    color: #FF5733;
+    margin: 10px 0;
+}
+
+.plan-features {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.plan-features li {
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.plan-features li::before {
+    content: "✔";
+    color: #FF5733;
+    position: absolute;
+    left: 0;
+    top: 2px;
+}
+
+.plan-button {
+    background: #FF5733;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.plan-button:hover {
+    background: #e94e2b;
+}
+
+/* Benefits Section */
+#membership-benefits {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.benefits-container h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.benefits-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.benefit-item {
+    width: 220px;
+    text-align: center;
+}
+
+.benefit-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.benefit-item p {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #333;
+}

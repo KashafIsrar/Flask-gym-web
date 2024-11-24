@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShadowForge Fitness | Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header>
+        <div class="container-full navbar">
+            <div class="logo">
+                <img src="{{ url_for('static', filename='img/logo.png') }}" alt="ShadowForge Fitness Logo">
+            </div>
+            <nav>
+                <ul class="navlinks">
+                    <li class="active"><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('about') }}">About</a></li>
+                <li><a href="{{ url_for('membership') }}">Membership</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="herobg">
+            <div class="hero-text">
+                <span class="hero-discount">Exclusive Discount</span>
+                <h1 class="hero-title">The Best Gym in Karachi</h1>
+                <p class="hero-description">Visit us today and achieve your fitness goals in an incredible environment.</p>
+                <a href="#services" class="hero-button">Explore Our Services</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Us Section -->
+    <section id="aboutus">
+        <div class="about-container">
+            <div class="about-image">
+                <img src="{{ url_for('static', filename='img/aboutimg.jpg') }}" alt="Gym Training Area">
+            </div>
+            <div class="about-text">
+                <h2>About Us</h2>
+                <p>
+                    At <strong>ShadowForge Fitness</strong>, we believe in empowering individuals to achieve their health and fitness goals in a supportive and inspiring environment. Our state-of-the-art facility, top-tier trainers, and inclusive community make us the best choice for fitness enthusiasts in Karachi.
+                </p>
+                <p>
+                    Whether you're just starting your fitness journey or are a seasoned athlete, we offer personalized training programs, cutting-edge equipment, and a variety of group classes to suit all needs and levels.
+                </p>
+                <p>
+                    Join us today and take the first step towards a healthier, happier you. Let’s build strength, confidence, and community together!
+                </p>
+                <div class="about-buttons">
+                    <a href="{{ url_for('about') }}" class="btn-about">Learn More About Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+  <!-- Services Section -->
+<section id="services">
+    <div class="services-text">
+        <h2>Services We Offer</h2>
+        <p>
+            We offer many services, including your personal gym trainer, free WiFi, a friendly environment, and an incredible ambiance.
+        </p>
+    </div>
+
+    <div class="services-cards">
+        {% for service in services %}
+        <div class="service-card">
+            <img src="{{ url_for('static', filename=service.image) }}" alt="{{ service.alt }}">
+            <h3>{{ service.title }}</h3>
+            <p>{{ service.description }}</p>
+            <a href="{{ service.link }}" class="service-button">{{ service.button_text }}</a>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="footer">
+            <div class="logo">
+                <img src="{{ url_for('static', filename='img/logo.png') }}" alt="ShadowForge Fitness Logo">
+                <p>
+                    At ShadowForge Fitness, we’re dedicated to helping you unlock your full potential. Join our community and experience the ultimate fitness journey.
+                </p>
+            </div>
+            <div class="footer-menu">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./about.html">About Us</a></li>
+                    <li><a href="./services.html">Services</a></li>
+                    <li><a href="./contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="contact-details">
+                <h3>Contact Details</h3>
+                <address class="contact-items">
+                    <a href="tel:03345643237">0334-564-3237</a><br>
+                    <a href="mailto:shadow.forgef@gmail.com">shadow.forgef@gmail.com</a><br>
+                    Street 10, DHA Phase 8, Karachi
+                </address>
+            </div>+
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 ShadowForge Fitness. All Rights Reserved. Designed by Kashaf Israr (2024F-BSE-125).</p>
+        </div>
+    </footer>
+</body>
+</html>
